@@ -42,7 +42,7 @@ window.addEventListener('beforescriptexecute', async (e) => {
         }
 
         const newScript = document.createElement('script');
-        newScript.type = 'text/javascript';
+        newScript.type = 'text/javascript'; // Might have to be of type 'module' instead. Just console.log(e.target) to find out.
         newScript.textContent = modifiedSrc;
         document.querySelector('head').appendChild(newScript);
 
